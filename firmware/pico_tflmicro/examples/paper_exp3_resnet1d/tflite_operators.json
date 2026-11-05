@@ -1,0 +1,10 @@
+[
+  "FULLY_CONNECTED",
+  "PACK",
+  "RESHAPE",
+  "TRANSPOSE",
+  "PAD",
+  "CONV_2D",
+  "MEAN",
+  "ADD"
+]

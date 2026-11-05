@@ -1,0 +1,70 @@
+{
+  "experiment": "A2_CALCE_A1_matched_block_validation_model_comparison",
+  "model_name": "CnnMambaSimpleCNN",
+  "parameter_count": 71106,
+  "use_duration_fusion": true,
+  "use_simple_cnn_frontend": true,
+  "outer_fold": "CALCE_group_1C__test_CS2_38",
+  "condition_group": "CALCE_group_1C",
+  "source_cells": [
+    "CS2_35",
+    "CS2_36",
+    "CS2_37"
+  ],
+  "test_record": "CS2_38",
+  "selection": {
+    "split": "same source-cell lifecycle blocks as current A1",
+    "boundary_purge_windows": 11,
+    "criterion": "equal-source-cell macro validation MSE",
+    "maximum_epochs": 50,
+    "selected_epoch": 42,
+    "selected_macro_validation_loss": 0.00011945676419242358
+  },
+  "final_training": {
+    "records": [
+      "CS2_35",
+      "CS2_36",
+      "CS2_37"
+    ],
+    "epochs": 42,
+    "from_scratch": true,
+    "uses_all_source_windows_after_selection": true
+  },
+  "inputs": {
+    "voltage": "charge_voltage_v [B,12,256]",
+    "current": "charge_current_a [B,12,256]",
+    "duration": "charge_duration_s [B,12,1]"
+  },
+  "label": "window_target_soh_nominal, identity-scaled",
+  "test_isolation": "held-out cell absent from training, validation, scaler fitting and epoch selection",
+  "data_root": "/data/coding/battery_frontend_ablation/data/model_input_a1_v2",
+  "dataset_manifest_sha256": "8d5577ad7bed1dff968c9d487e431b4540a07e43f100e18374ad4442f1ddc11b",
+  "device": "cuda",
+  "lr": 0.0005211317875270432,
+  "batch_size": 64,
+  "window": 12,
+  "points": 256,
+  "seed": 42,
+  "optimizer": "Adam",
+  "adam_betas": [
+    0.8,
+    0.99
+  ],
+  "scalers": {
+    "x1": {
+      "mean": 4.0589213371276855,
+      "std": 0.1435282677412033
+    },
+    "x2": {
+      "mean": 0.4203525483608246,
+      "std": 0.1917322874069214
+    },
+    "duration": {
+      "mean": 7309.93701171875,
+      "std": 1105.39697265625
+    },
+    "y": {
+      "type": "identity"
+    }
+  }
+}

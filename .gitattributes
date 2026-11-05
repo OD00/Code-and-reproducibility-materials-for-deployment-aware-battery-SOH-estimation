@@ -1,0 +1,5 @@
+# Preserve source bytes and line endings on every platform.
+# New wrapper files use LF; collected files retain their original line endings.
+* -text
+*.pt binary
+*.tflite binary

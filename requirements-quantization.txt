@@ -1,0 +1,4 @@
+-r requirements-training.txt
+tensorflow==2.21.0
+keras==3.12.2
+tf-keras==2.21.0

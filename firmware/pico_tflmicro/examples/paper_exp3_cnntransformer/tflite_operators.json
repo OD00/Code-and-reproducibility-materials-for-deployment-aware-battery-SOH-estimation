@@ -1,0 +1,17 @@
+[
+  "FULLY_CONNECTED",
+  "PACK",
+  "RESHAPE",
+  "TRANSPOSE",
+  "PAD",
+  "CONV_2D",
+  "MEAN",
+  "ADD",
+  "BATCH_MATMUL",
+  "MUL",
+  "SOFTMAX",
+  "SQUARED_DIFFERENCE",
+  "RSQRT",
+  "SUB",
+  "STRIDED_SLICE"
+]
